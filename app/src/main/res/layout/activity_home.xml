@@ -2,17 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:backgroundTint="#3F51B5"
     tools:context=".HomeActivity">
 
+    <Button
+        android:id="@+id/buttonDessert"
+        android:layout_width="109dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="134dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="Desserts"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMainCourse"
+        android:layout_width="109dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="72dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="Plats"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDessert"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStarter"
+        android:layout_width="109dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="72dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:text="Entrées"
+        android:textSize="12sp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMainCourse"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="88dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="160dp"
+        android:src="@drawable/logoandroid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/titleHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="144dp"
+        android:text="E-Restaurant"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
