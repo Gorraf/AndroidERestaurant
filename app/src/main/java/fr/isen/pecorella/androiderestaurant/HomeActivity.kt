@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import fr.isen.pecorella.androiderestaurant.databinding.ActivityHomeBinding
 
 
@@ -17,11 +16,11 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val intent = Intent(this@HomeActivity, ActivityCategorie::class.java)
+        val intent = Intent(this@HomeActivity, CategorieActivity::class.java)
 
         binding.buttonStarter.setOnClickListener(){
             //Toast.makeText(this,"Entrees button clicked", Toast.LENGTH_SHORT).show()
-            intent.putExtra("categoryName", "Entrees")
+            intent.putExtra("categoryName", "Entrées")
             val mealList = resources.getStringArray(R.array.dish_entrees).toList() as ArrayList<String>
             intent.putExtra("List_Meal", mealList)
             startActivity(intent);
@@ -29,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.buttonMainCourse.setOnClickListener(){
             //Toast.makeText(this,"Plats button clicked", Toast.LENGTH_SHORT).show()
-            intent.putExtra("categoryName", "Entrees")
+            intent.putExtra("categoryName", "Plats")
             val mealList = resources.getStringArray(R.array.dish_plats).toList() as ArrayList<String>
             intent.putExtra("List_Meal", mealList)
             startActivity(intent);
@@ -37,7 +36,7 @@ class HomeActivity : AppCompatActivity() {
 
         binding.buttonDessert.setOnClickListener(){
             //Toast.makeText(this,"Desserts button clicked", Toast.LENGTH_SHORT).show()
-            intent.putExtra("categoryName", "Entrees")
+            intent.putExtra("categoryName", "Desserts")
             val mealList = resources.getStringArray(R.array.dish_desserts).toList() as ArrayList<String>
             intent.putExtra("List_Meal", mealList)
             startActivity(intent);
